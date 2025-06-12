@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Project -->
+  <PropertyGroup Label="project">
+    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+		<LangVersion>13</LangVersion>
+    <Nullable>enable</Nullable>
+
+		<AssemblyName>N24.Format</AssemblyName>
+		<RootNamespace>N24.Format</RootNamespace>
+
+		<Deterministic>true</Deterministic>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+</Project>
