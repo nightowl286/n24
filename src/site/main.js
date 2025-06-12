@@ -1,24 +1,35 @@
+Chart.defaults.color = "#d7d7d7";
+
+
 (async function () {
 	const data = [
-		{ year: 2010, count: 10 },
-		{ year: 2011, count: 20 },
-		{ year: 2012, count: 15 },
-		{ year: 2013, count: 25 },
-		{ year: 2014, count: 22 },
-		{ year: 2015, count: 30 },
-		{ year: 2016, count: 28 },
+		{ day: 0, hours: 7.3 },
+		{ day: 1, hours: 7.4 },
+		{ day: 2, hours: 7.2 },
+		{ day: 3, hours: 7.3 },
+		{ day: 4, hours: 7.3 },
+		{ day: 5, hours: 7.3 },
+		{ day: 6, hours: 7.7 },
 	];
 
 	new Chart(
-		document.getElementById('acquisitions'),
+		document.getElementById('weekday-sleep'),
 		{
 			type: 'bar',
+			options: {
+				plugins: {
+					title: {
+						display: true,
+						text: "Average (mean) sleep (in hours) per week day"
+					}
+				}
+			},
 			data: {
-				labels: data.map(row => row.year),
+				labels: data.map(row => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][row.day]),
 				datasets: [
 					{
-						label: 'Acquisitions by year',
-						data: data.map(row => row.count)
+						label: 'nightowl286',
+						data: data.map(row => row.hours)
 					}
 				]
 			}

@@ -31,6 +31,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site", "site", "{39BD2E36-7
 		site\main.js = site\main.js
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conversion", "conversion", "{6E63DD0B-4132-E2F9-0A82-DB02312EFAE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Converter", "conversion\Converter\Converter.csproj", "{B514A884-2914-4877-BA8C-4EDA2FE5636A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{E15A235D-E3F6-43AF-907E-B99187F98F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E15A235D-E3F6-43AF-907E-B99187F98F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E15A235D-E3F6-43AF-907E-B99187F98F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B514A884-2914-4877-BA8C-4EDA2FE5636A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B514A884-2914-4877-BA8C-4EDA2FE5636A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B514A884-2914-4877-BA8C-4EDA2FE5636A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B514A884-2914-4877-BA8C-4EDA2FE5636A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +60,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A589AC00-6C04-4C58-B71A-E452E85DFFB2} = {3C4377B7-8649-4A81-BAAD-888F5C6E0FFB}
 		{E15A235D-E3F6-43AF-907E-B99187F98F7C} = {8E32D804-D9D1-FB1C-45F6-76EDCC07486B}
+		{B514A884-2914-4877-BA8C-4EDA2FE5636A} = {6E63DD0B-4132-E2F9-0A82-DB02312EFAE7}
 	EndGlobalSection
 EndGlobal

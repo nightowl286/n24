@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Project -->
+  <PropertyGroup Label="project">
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+		<LangVersion>13</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<!-- Project references -->
+  <ItemGroup Label="projects">
+    <ProjectReference Include="../../format/Format/Format.csproj" />
+  </ItemGroup>
+
+</Project>

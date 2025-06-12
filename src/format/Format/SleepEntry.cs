@@ -61,10 +61,6 @@ public sealed class SleepEntry(
 	[JsonPropertyName("end")]
 	public DateTimeOffset End { get; } = end;
 
-	/// <summary>The stages that have occurred during the sleep.</summary>
-	[JsonPropertyName("stages")]
-	public IReadOnlyList<SleepStage> Stages { get; } = stages;
-
 	/// <summary>The quality of the sleep.</summary>
 	/// <remarks>Might be missing from some data sets.</remarks>
 	[JsonPropertyName("quality")]
@@ -84,6 +80,10 @@ public sealed class SleepEntry(
 	/// <remarks>Might be missing from some data sets.</remarks>
 	[JsonPropertyName("cycles")]
 	public double? Cycles { get; } = cycles;
+
+	/// <summary>The stages that have occurred during the sleep.</summary>
+	[JsonPropertyName("stages")]
+	public IReadOnlyList<SleepStage> Stages { get; } = stages;
 	#endregion
 
 	#region Computed properties
