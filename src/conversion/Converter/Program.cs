@@ -17,12 +17,16 @@ class Program
 	#region Functions
 	static void Main(string[] args)
 	{
-		foreach (string labelPath in Directory.GetDirectories(DataDirectory))
+		foreach (string labelPath in Directory.GetDirectories(DataDirectory, "*", new EnumerationOptions() { }))
 		{
 			string label = Path.GetFileName(labelPath);
 			string rawPath = Path.Combine(labelPath, "raw");
 			string formatPath = Path.Combine(labelPath, "format.txt");
 			string format = File.ReadAllText(formatPath).Trim();
+			string resultFile = Path.Combine(labelPath, "extracted.json");
+
+			if (File.Exists(resultFile))
+				continue;
 
 			SleepData sleepData = format switch
 			{
@@ -30,7 +34,6 @@ class Program
 				_ => throw new NotSupportedException($"Unhandled data format ({format}).")
 			};
 
-			string resultFile = Path.Combine(labelPath, "extracted.json");
 			Save(sleepData, resultFile);
 		}
 	}
