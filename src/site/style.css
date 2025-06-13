@@ -40,7 +40,9 @@ html {
 			/* dark blue */
 
 			#16161d,
-			#101010) no-repeat center center
+			#101010) no-repeat;
+
+	background-size: 100% max(100%, 350em);
 }
 
 body {
