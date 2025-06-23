@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Project -->
+  <PropertyGroup Label="project">
+    <TargetFrameworks>net9.0</TargetFrameworks>
+		<LangVersion>13</LangVersion>
+    <Nullable>enable</Nullable>
+
+		<AssemblyName>N24.Analysis</AssemblyName>
+		<RootNamespace>N24.Analysis</RootNamespace>
+
+		<Deterministic>true</Deterministic>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<!-- Project references -->
+  <ItemGroup Label="projects">
+    <ProjectReference Include="../../format/Format/Format.csproj" />
+  </ItemGroup>
+
+</Project>
