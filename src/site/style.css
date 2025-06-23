@@ -1,3 +1,14 @@
+/* variables */
+
+:root {
+	--block-header-background: linear-gradient(to bottom, #2e2e2e, #2a2a2a, #2e2e2e) no-repeat;
+	--block-text-background: linear-gradient(to bottom, #2a2a2a77, #25252577) no-repeat;
+	--block-shadow: drop-shadow(0 0 3px black);
+	;
+}
+
+/* general */
+
 * {
 	margin: 0;
 }
@@ -47,5 +58,110 @@ html {
 
 body {
 	max-width: 100ch;
-	margin: auto;
+	height: 100%;
+	margin: 0 auto 0 auto;
+}
+
+#visual-body {
+	background-color: #17171733;
+
+	padding: 0 1em 0 1em;
+	border-left: 1px solid #2e2e2e;
+	border-right: 1px solid #2e2e2e;
+	contain: content;
+}
+
+/* links */
+
+a, a:visited {
+	color: rgb(50, 150, 255);
+	text-decoration: none;
+}
+
+a:hover:not(:has(img)) {
+	text-decoration: underline;
+}
+
+/* header */
+
+header {
+	width: 70%;
+	margin: 0 auto 5em auto;
+
+	filter: var(--block-shadow);
+	text-align: center;
+}
+
+header > h1 {
+	background: var(--block-header-background);
+	border-radius: 5px 5px 60px 60px;
+	padding: 0.5em;
+}
+
+header > p {
+	width: 50%;
+	margin: 0 auto 0 auto;
+	background: var(--block-text-background);
+	padding: 0.5em;
+	border-radius: 0 0 5px 5px;
+}
+
+/* sections */
+
+section {
+	width: 90%;
+	margin-bottom: 5em;
+	filter: var(--block-shadow);
+}
+
+section > h2 {
+	background: var(--block-header-background);
+	padding: 1em;
+	border-radius: 5px;
+}
+
+section:nth-child(even) {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+section:nth-child(odd) {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+/* section headers */
+
+section:nth-child(even) > h2 {
+	border-top-right-radius: 60px;
+	border-bottom-left-radius: 0px;
+	padding-right: 1em;
+	text-align: left;
+}
+
+section:nth-child(odd) > h2 {
+	border-top-left-radius: 60px;
+	border-bottom-right-radius: 0px;
+	padding-left: 1em;
+	text-align: right;
+}
+
+/* section paragraphs */
+
+section > p {
+	width: 75%;
+	background: var(--block-text-background);
+	padding: 1em;
+	border-radius: 0 0 5px 5px;
+	text-align: justify;
+}
+
+section:nth-child(even) > p {
+	margin-left: 1em;
+	margin-right: auto;
+}
+
+section:nth-child(odd) > p {
+	margin-left: auto;
+	margin-right: 1em;
 }
