@@ -56,13 +56,35 @@ html {
 	background-size: 100% max(100%, 350em);
 }
 
-body {
-	max-width: 100ch;
-	height: 100%;
-	margin: 0 auto 0 auto;
+#wip-header {
+	position: sticky;
+	top: 0;
+	font-size: 16pt;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	padding: 0.5em;
+	z-index: 1000;
+	text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+	background: repeating-linear-gradient(45deg,
+			#ffff3e,
+			#ffff3e 15px,
+			#2a2a2a 15px,
+			#2a2a2a 30px);
+}
+
+#wip-header > p {
+	filter: var(--block-shadow);
 }
 
 #visual-body {
+	max-width: 100ch;
+	height: 100%;
+	margin: 0 auto 0 auto;
 	background-color: #17171733;
 
 	padding: 0 1em 0 1em;
@@ -87,23 +109,28 @@ a:hover:not(:has(img)) {
 header {
 	width: 70%;
 	margin: 0 auto 5em auto;
-
-	filter: var(--block-shadow);
 	text-align: center;
+	filter: var(--block-shadow);
 }
 
-header > h1 {
+header > div {
 	background: var(--block-header-background);
 	border-radius: 5px 5px 60px 60px;
 	padding: 0.5em;
 }
 
-header > p {
-	width: 50%;
+header > nav {
+	width: 70%;
 	margin: 0 auto 0 auto;
 	background: var(--block-text-background);
 	padding: 0.5em;
 	border-radius: 0 0 5px 5px;
+	display: flex;
+	justify-content: center;
+}
+
+header > nav > a {
+	flex: 1 1 0px;
 }
 
 /* sections */
@@ -112,12 +139,6 @@ section {
 	width: 90%;
 	margin-bottom: 5em;
 	filter: var(--block-shadow);
-}
-
-section > h2 {
-	background: var(--block-header-background);
-	padding: 1em;
-	border-radius: 5px;
 }
 
 section:nth-child(even) {
@@ -132,18 +153,38 @@ section:nth-child(odd) {
 
 /* section headers */
 
-section:nth-child(even) > h2 {
+section > div:first-child {
+	background: var(--block-header-background);
+	padding: 1em;
+	border-radius: 5px;
+	column-gap: 0.5em;
+	display: flex;
+}
+
+section:nth-child(even) > div:first-child {
 	border-top-right-radius: 60px;
 	border-bottom-left-radius: 0px;
 	padding-right: 1em;
-	text-align: left;
 }
 
-section:nth-child(odd) > h2 {
+section:nth-child(odd) > div:first-child {
 	border-top-left-radius: 60px;
 	border-bottom-right-radius: 0px;
 	padding-left: 1em;
-	text-align: right;
+	justify-content: flex-end;
+}
+
+section > div:first-child > a {
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+section:nth-child(even) > div:first-child > a {
+	order: 1;
+}
+
+section:nth-child(odd) > div:first-child > a {
+	order: -1;
 }
 
 /* section paragraphs */
