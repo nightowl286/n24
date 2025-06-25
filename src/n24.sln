@@ -42,10 +42,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis", "analysis\Analysis\Analysis.csproj", "{A930E09D-1D02-4A83-8183-5E90B7B27EFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{A365126E-26FC-3425-D49F-42F51370FD02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sleep-times", "sleep-times", "{E89E2CB2-3115-45B0-0702-08EEB70BEBAE}"
 	ProjectSection(SolutionItems) = preProject
-		site\data\dspd.json = site\data\dspd.json
-		site\data\aspd.json = site\data\aspd.json
-		site\data\regular.json = site\data\regular.json
+		site\data\sleep-times\regular.json = site\data\sleep-times\regular.json
+		site\data\sleep-times\dspd.json = site\data\sleep-times\dspd.json
+		site\data\sleep-times\aspd.json = site\data\sleep-times\aspd.json
 	EndProjectSection
 EndProject
 Global
@@ -80,5 +82,6 @@ Global
 		{B514A884-2914-4877-BA8C-4EDA2FE5636A} = {6E63DD0B-4132-E2F9-0A82-DB02312EFAE7}
 		{A930E09D-1D02-4A83-8183-5E90B7B27EFD} = {CBEA8D62-3852-FA3C-D49A-A8497B11A9FF}
 		{A365126E-26FC-3425-D49F-42F51370FD02} = {39BD2E36-7548-A3B4-59B4-E088F7E0624A}
+		{E89E2CB2-3115-45B0-0702-08EEB70BEBAE} = {A365126E-26FC-3425-D49F-42F51370FD02}
 	EndGlobalSection
 EndGlobal

@@ -16,158 +16,87 @@ async function getChartData(id) {
 	}
 }
 
+
 function getTimeText(hour) {
+	if (hour % 1 !== 0) return null;
+	if (hour < 0) return null;
+
 	hour %= 24;
 
 	if (hour == 12) return "12pm";
 	if (hour == 0) return "12am";
-
-	if (hour < 12)
-		return `${hour}am`;
-
+	if (hour < 12) return `${hour}am`;
 	return `${hour - 12}pm`;
 }
 
-async function regularChart() {
-	const canvas = document.getElementById("regular-chart");
+async function sleepTimeCharts() {
+	let regularData = await getChartData("sleep-times/regular");
+	let dspdData = await getChartData("sleep-times/dspd");
+	let aspdData = await getChartData("sleep-times/aspd");
 
-	new Chart(canvas, {
+	const regularCanvas = document.getElementById("regular-chart");
+	const dspdCanvas = document.getElementById("dspd-chart");
+	const aspdCanvas = document.getElementById("aspd-chart");
+
+	console.log(regularData);
+
+	const tooltip = {
+		callbacks: {
+			label: item => `Asleep from ${getTimeText(item.raw[0])} to ${getTimeText(item.raw[1])}.`,
+			footer: item => `Asleep for ${item[0].raw[1] - item[0].raw[0]} hours`,
+		}
+	};
+	const legend = { position: "top" };
+	const xAxis = {
+		title: { display: true, text: "Day of the week", },
+		labels: [["Monday", "Tuesday"], ["Tuesday", "Wednesday"], ["Wednesday", "Thursday"], ["Thursday", "Friday"], ["Thursday", "Saturday"], ["Saturday", "Sunday"], ["Sunday", "Monday"]]
+	};
+	const yAxis = {
+		beginAtZero: false,
+		title: { display: true, text: "Time of the day" },
+		ticks: { callback: (value, _1, _2) => getTimeText(value) },
+	}
+	const scales = { x: xAxis, y: yAxis };
+
+	new Chart(regularCanvas, {
 		type: "bar",
-		data: await getChartData("regular"),
+		data: { datasets: [regularData] },
 		options: {
 			responsive: true,
 			plugins: {
-				legend: {
-					position: "top"
-				},
-				title: {
-					display: true,
-					text: "Regular sleep times"
-				},
-				tooltip: {
-					callbacks: {
-						label: item => `Asleep from ${getTimeText(item.raw[0])} to ${getTimeText(item.raw[1])}.`,
-						footer: item => `Asleep for ${item[0].raw[1] - item[0].raw[0]} hours`,
-					}
-				}
+				legend: legend,
+				title: { display: true, text: "'Regular' sleep times" },
+				tooltip: tooltip
 			},
-			scales: {
-				y: {
-					min: 22,
-					max: 36,
-					title: {
-						display: true,
-						text: "Time of the day"
-					},
-					ticks: {
-						callback: (value, _1, _2) => getTimeText(value)
-					},
-					afterBuildTicks: axis => axis.ticks = Array.from({ length: 36 - 22 }, (_, i) => ({ value: i + 22 }))
-				},
-				x: {
-					type: "category",
-					title: {
-						display: true,
-						text: "Day of the week",
-					},
-				}
-			}
+			scales: scales
 		}
 	});
-}
 
-async function dspdChart() {
-	const canvas = document.getElementById("dspd-chart");
-
-	new Chart(canvas, {
+	new Chart(dspdCanvas, {
 		type: "bar",
-		data: await getChartData("dspd"),
+		data: { datasets: [regularData, dspdData] },
 		options: {
 			responsive: true,
 			plugins: {
-				legend: {
-					position: "top"
-				},
-				title: {
-					display: true,
-					text: "DSPD vs regular sleep times"
-				},
-				tooltip: {
-					callbacks: {
-						label: item => `Asleep from ${getTimeText(item.raw[0])} to ${getTimeText(item.raw[1])}.`,
-						footer: item => `Asleep for ${item[0].raw[1] - item[0].raw[0]} hours`,
-					}
-				}
+				legend: legend,
+				title: { display: true, text: "'Regular' / DSPD sleep times" },
+				tooltip: tooltip
 			},
-			scales: {
-				y: {
-					min: 20,
-					max: 40,
-					title: {
-						display: true,
-						text: "Time of the day"
-					},
-					ticks: {
-						callback: (value, _1, _2) => getTimeText(value)
-					},
-					afterBuildTicks: axis => axis.ticks = Array.from({ length: 40 - 20 }, (_, i) => ({ value: i + 20 }))
-				},
-				x: {
-					type: "category",
-					title: {
-						display: true,
-						text: "Day of the week",
-					},
-				}
-			}
+			scales: scales
 		}
 	});
-}
 
-async function aspdChart() {
-	const canvas = document.getElementById("aspd-chart");
-
-	new Chart(canvas, {
+	new Chart(aspdCanvas, {
 		type: "bar",
-		data: await getChartData("aspd"),
+		data: { datasets: [regularData, dspdData, aspdData] },
 		options: {
 			responsive: true,
 			plugins: {
-				legend: {
-					position: "top"
-				},
-				title: {
-					display: true,
-					text: "ASPD vs regular sleep times"
-				},
-				tooltip: {
-					callbacks: {
-						label: item => `Asleep from ${getTimeText(item.raw[0])} to ${getTimeText(item.raw[1])}.`,
-						footer: item => `Asleep for ${item[0].raw[1] - item[0].raw[0]} hours`,
-					}
-				}
+				legend: legend,
+				title: { display: true, text: "'Regular' / DSPD / ASPD sleep times" },
+				tooltip: tooltip
 			},
-			scales: {
-				y: {
-					min: 17,
-					max: 39,
-					title: {
-						display: true,
-						text: "Time of the day"
-					},
-					ticks: {
-						callback: (value, _1, _2) => getTimeText(value)
-					},
-					afterBuildTicks: axis => axis.ticks = Array.from({ length: 39 - 17 }, (_, i) => ({ value: i + 17 }))
-				},
-				x: {
-					type: "category",
-					title: {
-						display: true,
-						text: "Day of the week",
-					},
-				}
-			}
+			scales: scales
 		}
 	});
 }
@@ -175,9 +104,7 @@ async function aspdChart() {
 document.addEventListener("DOMContentLoaded", async (event) => {
 
 	await Promise.all([
-		regularChart(),
-		dspdChart(),
-		aspdChart()
+		sleepTimeCharts()
 	]);
 
 })
