@@ -49,7 +49,7 @@ async function sleepTimeCharts() {
 	const legend = { position: "top" };
 	const xAxis = {
 		title: { display: true, text: "Day of the week", },
-		labels: [["Monday", "Tuesday"], ["Tuesday", "Wednesday"], ["Wednesday", "Thursday"], ["Thursday", "Friday"], ["Thursday", "Saturday"], ["Saturday", "Sunday"], ["Sunday", "Monday"]]
+		labels: [["Monday", "Tuesday"], ["Tuesday", "Wednesday"], ["Wednesday", "Thursday"], ["Thursday", "Friday"], ["Friday", "Saturday"], ["Saturday", "Sunday"], ["Sunday", "Monday"]]
 	};
 	const yAxis = {
 		beginAtZero: false,
