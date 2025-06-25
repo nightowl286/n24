@@ -111,10 +111,6 @@ async function sleepTimeCharts() {
 	});
 }
 
-document.addEventListener("DOMContentLoaded", async (event) => {
-
-	await Promise.all([
-		sleepTimeCharts()
-	]);
-
-})
+await Promise.all([
+	sleepTimeCharts()
+]);
