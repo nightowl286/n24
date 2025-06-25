@@ -1,5 +1,5 @@
 Chart.defaults.color = "#ffffff";
-Chart.defaults.borderColor = "#a0a0a0";
+Chart.defaults.borderColor = "#808080";
 
 async function getChartData(id) {
 	try {
@@ -38,34 +38,40 @@ async function sleepTimeCharts() {
 	const dspdCanvas = document.getElementById("dspd-chart");
 	const aspdCanvas = document.getElementById("aspd-chart");
 
-	console.log(regularData);
+	const dayLabels = [["Monday", "Tuesday"], ["Tuesday", "Wednesday"], ["Wednesday", "Thursday"], ["Thursday", "Friday"], ["Friday", "Saturday"], ["Saturday", "Sunday"], ["Sunday", "Monday"]];
 
 	const tooltip = {
 		callbacks: {
+			title: items => { const parts = items[0].label.split(','); return `${parts[0]} evening to ${parts[1]} morning` },
 			label: item => `Asleep from ${getTimeText(item.raw[0])} to ${getTimeText(item.raw[1])}.`,
 			footer: item => `Asleep for ${item[0].raw[1] - item[0].raw[0]} hours`,
 		}
 	};
 	const legend = { position: "top" };
-	const xAxis = {
+	const dayAxis = {
 		title: { display: true, text: "Day of the week", },
-		labels: [["Monday", "Tuesday"], ["Tuesday", "Wednesday"], ["Wednesday", "Thursday"], ["Thursday", "Friday"], ["Friday", "Saturday"], ["Saturday", "Sunday"], ["Sunday", "Monday"]]
+		ticks: {
+			autoSkip: false,
+			callback: (_1, index, _2) => dayLabels[index][0]
+		},
+		labels: dayLabels
 	};
-	const yAxis = {
+	const timeAxis = {
 		beginAtZero: false,
 		title: { display: true, text: "Time of the day" },
 		ticks: { callback: (value, _1, _2) => getTimeText(value) },
 	}
-	const scales = { x: xAxis, y: yAxis };
+	const scales = { y: dayAxis, x: timeAxis };
 
 	new Chart(regularCanvas, {
 		type: "bar",
 		data: { datasets: [regularData] },
 		options: {
+			indexAxis: 'y',
 			responsive: true,
 			plugins: {
 				legend: legend,
-				title: { display: true, text: "'Regular' sleep times" },
+				title: { display: true, text: "Average 'regular' sleep times" },
 				tooltip: tooltip
 			},
 			scales: scales
@@ -76,10 +82,12 @@ async function sleepTimeCharts() {
 		type: "bar",
 		data: { datasets: [regularData, dspdData] },
 		options: {
+			indexAxis: 'y',
 			responsive: true,
+			aspectRatio: 1.5,
 			plugins: {
 				legend: legend,
-				title: { display: true, text: "'Regular' / DSPD sleep times" },
+				title: { display: true, text: "Average 'regular' / DSPD sleep times" },
 				tooltip: tooltip
 			},
 			scales: scales
@@ -90,10 +98,12 @@ async function sleepTimeCharts() {
 		type: "bar",
 		data: { datasets: [regularData, dspdData, aspdData] },
 		options: {
+			indexAxis: 'y',
 			responsive: true,
+			aspectRatio: 1,
 			plugins: {
 				legend: legend,
-				title: { display: true, text: "'Regular' / DSPD / ASPD sleep times" },
+				title: { display: true, text: "Average 'regular' / DSPD / ASPD sleep times" },
 				tooltip: tooltip
 			},
 			scales: scales
