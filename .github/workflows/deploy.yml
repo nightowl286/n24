@@ -19,10 +19,13 @@ jobs:
     name: Deploy the website
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Upload the website files as an artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: src/site/
+          path: src/site
 
       - name: Deploying the website to Github Pages
         uses: actions/deploy-pages@v4
