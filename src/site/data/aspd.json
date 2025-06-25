@@ -1,0 +1,41 @@
+{
+	"labels": [["Monday","Tuesday"], ["Tuesday","Wednesday"], ["Wednesday","Thursday"], ["Thursday","Friday"], ["Friday","Saturday"], ["Saturday","Sunday"], ["Sunday","Monday"]],
+	"datasets": [
+		{
+			"label": "Regular",
+			"data": [
+				[ 23, 31 ],
+				[ 23, 31 ],
+				[ 23, 31 ],
+				[ 23, 31 ],
+				[ 26, 35 ],
+				[ 26, 35 ],
+				[ 23, 30 ]
+			]
+		},
+		{
+			"label": "DSPD",
+			"data": [
+				[ 28, 36 ],
+				[ 27, 35 ],
+				[ 28, 36 ],
+				[ 29, 37 ],
+				[ 28, 36 ],
+				[ 28, 36 ],
+				[ 28, 36 ]
+			]
+		},
+		{
+			"label": "ASPD",
+			"data": [
+				[ 19, 27 ],
+				[ 18, 26 ],
+				[ 19, 27 ],
+				[ 20, 28 ],
+				[ 19, 27 ],
+				[ 19, 27 ],
+				[ 19, 27 ]
+			]
+		}
+	]
+}
