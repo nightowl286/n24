@@ -9,7 +9,7 @@ on:
   push:
     paths:
       - 'src/site/**' # React to site files changing
-      - '.github/workflows/build.yml' # React to the workflow file itself changing
+      - '.github/workflows/deploy.yml' # React to the workflow file itself changing
 
   workflow_dispatch: # Allow manual runs
 
