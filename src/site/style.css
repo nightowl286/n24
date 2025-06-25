@@ -90,6 +90,7 @@ html {
 	padding: 0 1em 0 1em;
 	border-left: 1px solid #2e2e2e;
 	border-right: 1px solid #2e2e2e;
+	border-bottom: 1px solid #2e2e2e;
 	contain: content;
 }
 
