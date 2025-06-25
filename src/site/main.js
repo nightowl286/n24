@@ -3,7 +3,7 @@ Chart.defaults.borderColor = "#808080";
 
 async function getChartData(id) {
 	try {
-		const response = await fetch(`/data/${id}.json`);
+		const response = await fetch(`data/${id}.json`);
 		if (!response.ok) {
 			throw new Error(`Failed to obtain chart data for (${id}) (result: ${response.status}).`)
 		}
