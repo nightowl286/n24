@@ -50,6 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sleep-times", "sleep-times"
 		site\data\sleep-times\regular.json = site\data\sleep-times\regular.json
 		site\data\sleep-times\dspd.json = site\data\sleep-times\dspd.json
 		site\data\sleep-times\aspd.json = site\data\sleep-times\aspd.json
+		site\data\sleep-times\n24.json = site\data\sleep-times\n24.json
 	EndProjectSection
 EndProject
 Global

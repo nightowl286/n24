@@ -33,10 +33,12 @@ async function sleepTimeCharts() {
 	let regularData = await getChartData("sleep-times/regular");
 	let dspdData = await getChartData("sleep-times/dspd");
 	let aspdData = await getChartData("sleep-times/aspd");
+	let n24Data = await getChartData("sleep-times/n24");
 
 	const regularCanvas = document.getElementById("regular-chart");
 	const dspdCanvas = document.getElementById("dspd-chart");
 	const aspdCanvas = document.getElementById("aspd-chart");
+	const n24Canvas = document.getElementById("n24-chart");
 
 	const dayLabels = [["Monday", "Tuesday"], ["Tuesday", "Wednesday"], ["Wednesday", "Thursday"], ["Thursday", "Friday"], ["Friday", "Saturday"], ["Saturday", "Sunday"], ["Sunday", "Monday"]];
 
@@ -71,7 +73,7 @@ async function sleepTimeCharts() {
 			responsive: true,
 			plugins: {
 				legend: legend,
-				title: { display: true, text: "Average 'regular' sleep times" },
+				title: { display: true, text: "Average sleep times for each day of the week" },
 				tooltip: tooltip
 			},
 			scales: scales
@@ -87,7 +89,7 @@ async function sleepTimeCharts() {
 			aspectRatio: 1.5,
 			plugins: {
 				legend: legend,
-				title: { display: true, text: "Average 'regular' / DSPD sleep times" },
+				title: { display: true, text: "Average sleep times for each day of the week" },
 				tooltip: tooltip
 			},
 			scales: scales
@@ -103,7 +105,23 @@ async function sleepTimeCharts() {
 			aspectRatio: 1,
 			plugins: {
 				legend: legend,
-				title: { display: true, text: "Average 'regular' / DSPD / ASPD sleep times" },
+				title: { display: true, text: "Average sleep times for each day of the week" },
+				tooltip: tooltip
+			},
+			scales: scales
+		}
+	});
+
+	new Chart(n24Canvas, {
+		type: "bar",
+		data: { datasets: [regularData, dspdData, aspdData, n24Data] },
+		options: {
+			indexAxis: 'y',
+			responsive: true,
+			aspectRatio: 1,
+			plugins: {
+				legend: legend,
+				title: { display: true, text: "Example sleep times during a single week" },
 				tooltip: tooltip
 			},
 			scales: scales
