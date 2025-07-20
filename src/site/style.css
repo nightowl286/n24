@@ -124,7 +124,7 @@ header {
 
 header > div {
 	background: var(--block-header-background);
-	border-radius: 5px 5px 60px 60px;
+	border-radius: 5px 5px 30px 30px;
 	padding: 0.5em;
 }
 
@@ -171,13 +171,13 @@ section > div:first-child {
 }
 
 section:nth-child(even) > div:first-child {
-	border-top-right-radius: 60px;
+	border-top-right-radius: 30px;
 	border-bottom-left-radius: 0px;
 	padding-right: 1em;
 }
 
 section:nth-child(odd) > div:first-child {
-	border-top-left-radius: 60px;
+	border-top-left-radius: 30px;
 	border-bottom-right-radius: 0px;
 	padding-left: 1em;
 	justify-content: flex-end;
