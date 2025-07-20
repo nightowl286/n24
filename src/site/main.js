@@ -71,6 +71,7 @@ async function sleepTimeCharts() {
 		options: {
 			indexAxis: 'y',
 			responsive: true,
+			aspectRatio: 1.5,
 			plugins: {
 				legend: legend,
 				title: { display: true, text: "Average sleep times for each day of the week" },
@@ -86,7 +87,7 @@ async function sleepTimeCharts() {
 		options: {
 			indexAxis: 'y',
 			responsive: true,
-			aspectRatio: 1.5,
+			aspectRatio: 1.25,
 			plugins: {
 				legend: legend,
 				title: { display: true, text: "Average sleep times for each day of the week" },
@@ -118,7 +119,7 @@ async function sleepTimeCharts() {
 		options: {
 			indexAxis: 'y',
 			responsive: true,
-			aspectRatio: 1,
+			aspectRatio: 0.75,
 			plugins: {
 				legend: legend,
 				title: { display: true, text: "Example sleep times during a single week" },
@@ -138,7 +139,7 @@ async function dayLengthChart() {
 		data: { datasets: data },
 		options: {
 			responsive: true,
-			aspectRatio: 2,
+			aspectRatio: 1.5,
 			plugins: {
 				legend: {},
 				title: { display: true, text: "Day length comparison" },

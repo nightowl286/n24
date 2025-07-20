@@ -49,7 +49,7 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 	> **Answer here**
 
 
-6. Do you believe you have [N24](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder) *(regardless of whether you have an official diagnosis or not)*? If  ***(Skip any further questions in this section if you answered no).***
+6. Do you believe you have [N24](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
 
 	> **Answer here**
 
@@ -100,7 +100,7 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 	> **Answer here**
 
 
-15. Do you believe you have [DSPD](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder) (regardless of whether you have an official diagnosis or not)? ***(Skip any further questions in this section if you answered no).***
+15. Do you believe you have [DSPD](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
 
 	> **Answer here**
 
@@ -146,7 +146,7 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 	> **Answer here**
 
 
-23. Do you believe you have [ASPD](https://en.wikipedia.org/wiki/Advanced_sleep_phase_disorder) (regardless of whether you have an official diagnosis or not)? ***(Skip any further questions in this section if you answered no).***
+23. Do you believe you have [ASPD](https://en.wikipedia.org/wiki/Advanced_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
 
 	> **Answer here**
 
@@ -182,7 +182,7 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 	> **Answer here**
 
 
-29. How visually impaired are you? *(fully/partially/e.t.c).*
+29. How visually impaired are you? *(fully/partially/etc.).*
 
 	> **Answer here**
 
@@ -204,7 +204,7 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 	> **Answer here**
 
 
-33. If your sleep is regularly interrupted by internal or external factors, please describe them here. *(This can mean things like: being too warm; bathroom breaks; your surroundings being too loud; alarm clocks; e.t.c).* If you're not sure what wakes you up then please say so instead of skipping the question.
+33. If your sleep is regularly interrupted by internal or external factors, please describe them here. *(This can mean things like: being too warm; bathroom breaks; your surroundings being too loud; alarm clocks; etc.).* If you're not sure what wakes you up then please say so instead of skipping the question.
 
 	> **Answer here**
 
@@ -273,17 +273,17 @@ You can upload your data anywhere that you want to, as long as it is something t
 
 - If the file size is under 10MB, you can send it to me directly through [Discord](https://discord.com/), my username is listed at the top of the survey. *(If you do decide to share your data through Discord then please provide your Discord username as the answer to the question below).*
 
-- If the file is is under 25MB, you can send it to me through an email, my email is listed at the top of the survey. *(If you do decide to share your data through email, then please provide your email address as the answer to the question below).*
+- If the file is is under 25MB, you can email it to me at [nightowl286@protonmail.com](mailto:nightowl286@protonmail.com). *(If you do decide to share your data through email, then please provide your email address as the answer to the question below so that I can link your survey answers with your sleep data).*
 
 
 ---
 
-38. Link  to your sleep data *(or your email/Discord username if that's how you want to share your data)*, please include at least a few months (or years if possible). *This can (and should) be in the raw format that is exported from your sleep tracking device.*
+38. Link  to your sleep data *(or your email/Discord username if that's how you want to share your data)*, please include at least a few months (or years if possible). *This can (and should) be in the raw format that is exported from your sleep tracking device as that will be the easier for me to work with **(but be careful about any left over personal data that you may not want to share)**.*
 
 	> **Answer here**
 
 
-39. What format is your sleep data in?
+39. What format is your sleep data in? *(Samsung/Apple/Oura/Fitbit/etc.)*
 
 	> **Answer here**
 
@@ -300,7 +300,7 @@ You can upload your data anywhere that you want to, as long as it is something t
 	> **Answer here**
 
 
-42. What format is the additional data in?
+42. What format is the additional data in? *(Samsung/Apple/Fitbit/etc.)*
 
 	> **Answer here**
 
@@ -333,8 +333,13 @@ The website will contain several case studies for exploring sleep disorders and 
 	> **Answer here**
 
 
+47. Would you like your case study to be under a specific name, or would you prefer for it to remain anonymous? *(This is separate to question #48).*
+
+	> **Answer here**
+
+
 ## Credit
 
-47. *(Fully optional)* What name would you like to be credited under on the website? *(Please keep it appropriate or I might ignore/modify it).*  If you leave it blank then you'll be counted as an anonymous participant.
+48. *(Fully optional)* What name would you like to be credited under on the website? *(Please keep it appropriate or I might ignore/modify it).*  If you leave it blank then you'll be counted as an anonymous participant.
 
 	> **Answer here**
