@@ -30,10 +30,10 @@ function getTimeText(hour) {
 }
 
 async function sleepTimeCharts() {
-	let regularData = await getChartData("sleep-times/regular");
-	let dspdData = await getChartData("sleep-times/dspd");
-	let aspdData = await getChartData("sleep-times/aspd");
-	let n24Data = await getChartData("sleep-times/n24");
+	const regularData = await getChartData("sleep-times/regular");
+	const dspdData = await getChartData("sleep-times/dspd");
+	const aspdData = await getChartData("sleep-times/aspd");
+	const n24Data = await getChartData("sleep-times/n24");
 
 	const regularCanvas = document.getElementById("regular-chart");
 	const dspdCanvas = document.getElementById("dspd-chart");
@@ -129,6 +129,47 @@ async function sleepTimeCharts() {
 	});
 }
 
+async function dayLengthChart() {
+	const data = await getChartData("day-length");
+	const canvas = document.getElementById("day-length-chart");
+
+	new Chart(canvas, {
+		type: "bar",
+		data: { datasets: data },
+		options: {
+			responsive: true,
+			aspectRatio: 2,
+			plugins: {
+				legend: {},
+				title: { display: true, text: "Day length comparison" },
+				tooltip: {
+					callbacks: {
+						title: items => { console.log(items); const item = items[0]; return `${item.label} ${item.dataset.label.toLowerCase()}` },
+						label: item => `${item.raw} hours`
+					}
+				}
+			},
+			scales: {
+				x: {
+					ticks: {
+						autoSkip: false
+					},
+					labels: ["'Regular'", "DSPD", "ASPD", "N24"],
+					stacked: true
+				},
+				y: {
+					title: { display: true, text: "Hours" },
+					stacked: true,
+					ticks: {
+						stepSize: 4,
+					}
+				}
+			}
+		}
+	});
+}
+
 await Promise.all([
-	sleepTimeCharts()
+	sleepTimeCharts(),
+	dayLengthChart()
 ]);

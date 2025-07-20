@@ -1,0 +1,12 @@
+[
+	{
+		"label": "Sleep duration",
+		"backgroundColor": "#009ee3cc",
+		"data": [8,8,8,8]
+	},
+	{
+		"label": "Awake duration",
+		"backgroundColor": "#ff527acc",
+		"data": [16,16,16,18]
+	}
+]

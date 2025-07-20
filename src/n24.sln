@@ -44,6 +44,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analysis", "analysis\Analysis\Analysis.csproj", "{A930E09D-1D02-4A83-8183-5E90B7B27EFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{A365126E-26FC-3425-D49F-42F51370FD02}"
+	ProjectSection(SolutionItems) = preProject
+		site\data\day-length.json = site\data\day-length.json
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sleep-times", "sleep-times", "{E89E2CB2-3115-45B0-0702-08EEB70BEBAE}"
 	ProjectSection(SolutionItems) = preProject
