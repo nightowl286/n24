@@ -215,3 +215,49 @@ section:nth-child(odd) > p {
 	margin-left: auto;
 	margin-right: 1em;
 }
+
+/* mobile responsiveness */
+@media screen and (width < 80rem) {
+
+	#visual-body {
+		padding: 0;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	header > div {
+		border-radius: 0;
+	}
+
+	section {
+		width: 100%;
+	}
+
+	section:nth-child(even) > div:first-child {
+		border-radius: 0;
+		padding-left: 0;
+		justify-content: center;
+	}
+
+	section:nth-child(odd) > div:first-child {
+		border-radius: 0;
+		padding-right: 0;
+		justify-content: center;
+	}
+
+	section > p {
+		width: unset;
+	}
+
+	section:nth-child(even) > p {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	section:nth-child(odd) > p {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
