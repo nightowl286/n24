@@ -15,6 +15,8 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 
 - If any question does not apply to you, then feel free to skip it/leave it blank.
 
+- This survey is for people *with* sleep disorders **and** for people *without* them.
+
 - Including your sleep data is not a strict requirement, but it is ***highly*** appreciated, and it will make up most of the content on the website.
 
 - You're not required to answer every question. If you're not comfortable answering some of the questions, or you're not comfortable disclosing some of the details, then you don't have to. However it is highly appreciated if you can do so. *(If you don't want to disclose a specific detail then please say that instead of fully skipping the question).*
