@@ -36,22 +36,22 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 
 ## N24 (non-24 hour sleep wake disorder/syndrome)
 
-3. Do you have an official [N24](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder) diagnosis? *(Please also provide how long ago you've gotten your diagnosis).*
+3. Do you believe you have [N24](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
 
 	> **Answer here**
 
 
-4. How long did it take for you to get your diagnosis? *(After you've started suspecting you had some form of a sleep problem).*
+4. Do you have an official [N24](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder) diagnosis? *(Please also provide how long ago you've gotten your diagnosis).*
 
 	> **Answer here**
 
 
-5. Have you had any difficulties with getting your diagnosis? *(If so, please describe them).*
+5. How long did it take for you to get your diagnosis? *(After you've started suspecting you had some form of a sleep problem).*
 
 	> **Answer here**
 
 
-6. Do you believe you have [N24](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
+6. Have you had any difficulties with getting your diagnosis? *(If so, please describe them).*
 
 	> **Answer here**
 
@@ -87,22 +87,22 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 
 ## DSPD (delayed sleep phase disorder/syndrome)
 
-12. Do you have an official [DSPD](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder) diagnosis? *(Please also provide how long ago you've gotten your diagnosis).*
+12. Do you believe you have [DSPD](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
 
 	> **Answer here**
 
 
-13. How long did it take for you to get your diagnosis? *(After you've started suspecting you had some form of a sleep problem).*
+13. Do you have an official [DSPD](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder) diagnosis? *(Please also provide how long ago you've gotten your diagnosis).*
 
 	> **Answer here**
 
 
-14. Have you had any difficulties with getting your diagnosis? *(If so, please describe them).*
+14. How long did it take for you to get your diagnosis? *(After you've started suspecting you had some form of a sleep problem).*
 
 	> **Answer here**
 
 
-15. Do you believe you have [DSPD](https://en.wikipedia.org/wiki/Delayed_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
+15. Have you had any difficulties with getting your diagnosis? *(If so, please describe them).*
 
 	> **Answer here**
 
@@ -133,22 +133,22 @@ The survey has been organised by [nightowl286](https://github.com/nightowl286/),
 
 ## ASPD (advanced sleep phase disorder/syndrome)
 
-20. Do you have an official [ASPD](https://en.wikipedia.org/wiki/Advanced_sleep_phase_disorder) diagnosis? *(Please also provide how long ago you've gotten your diagnosis).*
+20. Do you believe you have [ASPD](https://en.wikipedia.org/wiki/Advanced_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
 
 	> **Answer here**
 
 
-21. How long did it take for you to get your diagnosis? *(After you've started suspecting you had some form of a sleep problem).*
+21. Do you have an official [ASPD](https://en.wikipedia.org/wiki/Advanced_sleep_phase_disorder) diagnosis? *(Please also provide how long ago you've gotten your diagnosis).*
 
 	> **Answer here**
 
 
-22. Have you had any difficulties with getting your diagnosis? *(If so, please describe them).*
+22. How long did it take for you to get your diagnosis? *(After you've started suspecting you had some form of a sleep problem).*
 
 	> **Answer here**
 
 
-23. Do you believe you have [ASPD](https://en.wikipedia.org/wiki/Advanced_sleep_phase_disorder)? ***(Skip any further questions in this section if you answered no).***
+23. Have you had any difficulties with getting your diagnosis? *(If so, please describe them).*
 
 	> **Answer here**
 
