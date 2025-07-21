@@ -12,6 +12,19 @@
 	margin: 0;
 }
 
+ul {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+li {
+	text-align: start;
+}
+
+p + ul {
+	margin-bottom: 0;
+}
+
 html {
 	font-family: 'Noto Sans', sans-serif;
 	min-height: 100vh;

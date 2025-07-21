@@ -13,7 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{C841F5C2-8
 		..\.gitignore = ..\.gitignore
 		..\.gitattributes = ..\.gitattributes
 		..\.editorconfig = ..\.editorconfig
-		..\survey.md = ..\survey.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{218B6F35-38A8-8894-4A45-A70D6B0063B3}"
@@ -33,6 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site", "site", "{39BD2E36-7
 		site\main.js = site\main.js
 		site\case-studies.html = site\case-studies.html
 		site\survey.html = site\survey.html
+		site\survey.md = site\survey.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conversion", "conversion", "{6E63DD0B-4132-E2F9-0A82-DB02312EFAE7}"
