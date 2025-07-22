@@ -23,10 +23,13 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Run build script
+        run: ./build_site.sh
+
       - name: Upload the website files as an artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: src/site
+          path: site_output
 
       - name: Deploying the website to Github Pages
         uses: actions/deploy-pages@v4
