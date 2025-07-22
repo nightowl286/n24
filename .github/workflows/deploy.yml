@@ -10,6 +10,7 @@ on:
     branches: master
     paths:
       - 'src/site/**' # React to site files changing
+      - 'build_site.sh' # React to build file changing
       - '.github/workflows/deploy.yml' # React to the workflow file itself changing
 
   workflow_dispatch: # Allow manual runs
