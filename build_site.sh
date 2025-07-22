@@ -23,4 +23,4 @@ cp src/site/*.js site_output
 # Copy over html files
 cp src/site/index.html site_output
 cp src/site/survey.html site_output
-cp src/site/case-studies.html site_output
+cp src/site/case_studies.html site_output
