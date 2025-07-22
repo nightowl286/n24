@@ -7,6 +7,7 @@ permissions:
 
 on:
   push:
+    branches: master
     paths:
       - 'src/site/**' # React to site files changing
       - '.github/workflows/deploy.yml' # React to the workflow file itself changing
