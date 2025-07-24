@@ -9,9 +9,10 @@ on:
   push:
     branches: master
     paths:
-      - 'src/site/**' # React to site files changing
-      - 'build_site.sh' # React to build file changing
-      - '.github/workflows/deploy.yml' # React to the workflow file itself changing
+      - 'src/site/**' # React to site files
+      - 'src/ChartGenerator/**' # React to chart generator
+      - 'build_site.sh' # React to build file
+      - '.github/workflows/deploy.yml' # React to the workflow file itself
 
   workflow_dispatch: # Allow manual runs
 
