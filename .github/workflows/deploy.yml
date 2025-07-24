@@ -24,11 +24,21 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+          run_install: false
+
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: "pnpm"
+
+      - name: Install pnpm dependencies
+        run: pnpm install
+        working-directory: src/ChartGenerator
 
       - name: Run build script
         run: ./build_site.sh

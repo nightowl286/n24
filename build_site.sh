@@ -31,7 +31,7 @@ cp -v src/site/case_studies.html site_output
 
 printf "\n[*] Generate chart images\n"
 cd src/ChartGenerator
-pnpm node main.js > /dev/null
+node main.js
 cd ../..
 
 cp -rv src/ChartGenerator/charts site_output

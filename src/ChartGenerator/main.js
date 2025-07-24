@@ -35,10 +35,7 @@ Chart.register([
 			const chart = new Chart(canvas, config);
 
 			const pngBuffer = await canvas.toBuffer("png");
-			const path = `charts/${key}.png`;
-
-			console.log(`writing ${pngBuffer.byteLength} bytes to ${path}`);
-			await fsp.writeFile(path, pngBuffer);
+			await fsp.writeFile(`charts/${key}.png`, pngBuffer);
 
 			chart.destroy();
 		}
