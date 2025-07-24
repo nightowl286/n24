@@ -30,10 +30,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "site", "site", "{39BD2E36-7
 	ProjectSection(SolutionItems) = preProject
 		site\index.html = site\index.html
 		site\style.css = site\style.css
-		site\main.js = site\main.js
 		site\survey.html = site\survey.html
 		site\survey.md = site\survey.md
 		site\case_studies.html = site\case_studies.html
+		site\utils.js = site\utils.js
+		site\index.charts.js = site\index.charts.js
+		site\index.js = site\index.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conversion", "conversion", "{6E63DD0B-4132-E2F9-0A82-DB02312EFAE7}"
