@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-
 printf "[*] Ensure output directory is empty\n"
 rm -rf site_output
 mkdir site_output
@@ -28,3 +27,11 @@ printf "\n[*] Copy over html files\n"
 cp -v src/site/index.html site_output
 cp -v src/site/survey.html site_output
 cp -v src/site/case_studies.html site_output
+
+
+printf "\n[*] Generate chart images\n"
+cd src/ChartGenerator
+pnpm node main.js > /dev/null
+cd ../..
+
+cp -rv src/ChartGenerator/charts site_output

@@ -9,6 +9,9 @@ import {
 	Legend, Title
 } from 'chart.js';
 
+Chart.defaults.color = "#ffffff";
+Chart.defaults.borderColor = "#808080";
+
 Chart.register([
 	BarController, BubbleController, DoughnutController, LineController, PieController, PolarAreaController, RadarController, ScatterController,
 	CategoryScale, LinearScale, LogarithmicScale, RadialLinearScale, TimeScale, TimeSeriesScale,
@@ -17,7 +20,7 @@ Chart.register([
 ]);
 
 (async () => {
-	fsp.mkdir("output", { recursive: true });
+	fsp.mkdir("charts", { recursive: true });
 
 	const charts = await getCharts(getChartData);
 
@@ -32,7 +35,7 @@ Chart.register([
 			const chart = new Chart(canvas, config);
 
 			const pngBuffer = await canvas.toBuffer("png");
-			const path = `output/${key}.png`;
+			const path = `charts/${key}.png`;
 
 			console.log(`writing ${pngBuffer.byteLength} bytes to ${path}`);
 			await fsp.writeFile(path, pngBuffer);

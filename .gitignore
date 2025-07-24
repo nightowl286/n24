@@ -46,4 +46,4 @@ bld/
 
 # Chart generator
 /src/ChartGenerator/node_modules/
-/src/ChartGenerator/output/
+/src/ChartGenerator/charts/
