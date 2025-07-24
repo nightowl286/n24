@@ -1,9 +1,6 @@
-import { getChartData, getTimeText } from "./utils.js";
+import { getTimeText } from "./utils.js";
 
-export let charts = {};
-
-/* sleep time charts */
-{
+export async function getCharts(getChartData) {
 	const regularData = await getChartData("sleep-times/regular");
 	const dspdData = await getChartData("sleep-times/dspd");
 	const aspdData = await getChartData("sleep-times/aspd");
@@ -26,8 +23,6 @@ export let charts = {};
 			footer: item => `Asleep for ${item[0].raw[1] - item[0].raw[0]} hours`,
 		}
 	};
-	const legend = { position: "top" };
-	const title = { display: true, text: "Average sleep times for each day of the week" };
 
 	const dayAxis = {
 		title: { display: true, text: "Day of the week", },
@@ -44,105 +39,106 @@ export let charts = {};
 		ticks: { callback: (value, _1, _2) => getTimeText(value) },
 	}
 
+	const legend = { position: "top" };
+	const title = { display: true, text: "Average sleep times for each day of the week" };
 	const scales = { y: dayAxis, x: timeAxis };
 
-	charts["regular"] = {
-		type: "bar",
-		data: { datasets: [regularData] },
-		options: {
-			indexAxis: 'y',
-			responsive: true,
-			aspectRatio: 1.5,
-			plugins: {
-				legend: legend,
-				title: title,
-				tooltip: tooltip
-			},
-			scales: scales
-		}
-	};
-
-	charts["dspd"] = {
-		type: "bar",
-		data: { datasets: [regularData, dspdData] },
-		options: {
-			indexAxis: 'y',
-			responsive: true,
-			aspectRatio: 1.25,
-			plugins: {
-				legend: legend,
-				title: title,
-				tooltip: tooltip
-			},
-			scales: scales
-		}
-	};
-
-	charts["aspd"] = {
-		type: "bar",
-		data: { datasets: [regularData, dspdData, aspdData] },
-		options: {
-			indexAxis: 'y',
-			responsive: true,
-			aspectRatio: 1,
-			plugins: {
-				legend: legend,
-				title: title,
-				tooltip: tooltip
-			},
-			scales: scales
-		}
-	};
-
-	charts["n24"] = {
-		type: "bar",
-		data: { datasets: [regularData, dspdData, aspdData, n24Data] },
-		options: {
-			indexAxis: 'y',
-			responsive: true,
-			aspectRatio: 0.75,
-			plugins: {
-				legend: legend,
-				title: { display: true, text: "Example sleep times during a single week" },
-				tooltip: tooltip
-			},
-			scales: scales
-		}
-	};
-}
-
-charts["day-length"] =
-{
-	type: "bar",
-	data: { datasets: await getChartData("day-length") },
-	options: {
-		responsive: true,
-		aspectRatio: 1.5,
-		plugins: {
-			legend: {},
-			title: { display: true, text: "Day length comparison" },
-			tooltip: {
-				callbacks: {
-					title: items => { console.log(items); const item = items[0]; return `${item.label} ${item.dataset.label.toLowerCase()}` },
-					label: item => `${item.raw} hours`
-				}
+	const charts = {
+		regular: {
+			type: "bar",
+			data: { datasets: [regularData] },
+			options: {
+				indexAxis: 'y',
+				responsive: true,
+				aspectRatio: 1.5,
+				plugins: {
+					legend: legend,
+					title: title,
+					tooltip: tooltip
+				},
+				scales: scales
 			}
 		},
-		scales: {
-			x: {
-				ticks: {
-					autoSkip: false
+		dspd: {
+			type: "bar",
+			data: { datasets: [regularData, dspdData] },
+			options: {
+				indexAxis: 'y',
+				responsive: true,
+				aspectRatio: 1.25,
+				plugins: {
+					legend: legend,
+					title: title,
+					tooltip: tooltip
 				},
-				labels: ["'Regular'", "DSPD", "ASPD", "N24"],
-				stacked: true
-			},
-			y: {
-				title: { display: true, text: "Hours" },
-				stacked: true,
-				ticks: {
-					stepSize: 4,
+				scales: scales
+			}
+		},
+		aspd: {
+			type: "bar",
+			data: { datasets: [regularData, dspdData, aspdData] },
+			options: {
+				indexAxis: 'y',
+				responsive: true,
+				aspectRatio: 1,
+				plugins: {
+					legend: legend,
+					title: title,
+					tooltip: tooltip
+				},
+				scales: scales
+			}
+		},
+		n24: {
+			type: "bar",
+			data: { datasets: [regularData, dspdData, aspdData, n24Data] },
+			options: {
+				indexAxis: 'y',
+				responsive: true,
+				aspectRatio: 0.75,
+				plugins: {
+					legend: legend,
+					title: { display: true, text: "Example sleep times during a single week" },
+					tooltip: tooltip
+				},
+				scales: scales
+			}
+		},
+		"day-length": {
+			type: "bar",
+			data: { datasets: await getChartData("day-length") },
+			options: {
+				responsive: true,
+				aspectRatio: 1.5,
+				plugins: {
+					legend: { position: "top" },
+					title: { display: true, text: "Day length comparison" },
+					tooltip: {
+						callbacks: {
+							title: items => { console.log(items); const item = items[0]; return `${item.label} ${item.dataset.label.toLowerCase()}` },
+							label: item => `${item.raw} hours`
+						}
+					}
+				},
+				scales: {
+					x: {
+						ticks: {
+							autoSkip: false
+						},
+						labels: ["'Regular'", "DSPD", "ASPD", "N24"],
+						stacked: true
+					},
+					y: {
+						title: { display: true, text: "Hours" },
+						stacked: true,
+						ticks: {
+							stepSize: 4,
+						}
+					}
 				}
 			}
 		}
-	}
+	};
+
+	return charts;
 }

@@ -1,8 +1,11 @@
 import './external/chartjs.umd.min.js';
-import { charts } from './index.charts.js';
+import { getChartData } from './utils.js';
+import { getCharts } from './index.charts.js';
 
 Chart.defaults.color = "#ffffff";
 Chart.defaults.borderColor = "#808080";
+
+const charts = await getCharts(getChartData);
 
 for (const key in charts) {
 	if (Object.prototype.hasOwnProperty.call(charts, key)) {

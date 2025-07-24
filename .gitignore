@@ -43,3 +43,7 @@ bld/
 
 # Project locals
 /src/local/
+
+# Chart generator
+/src/ChartGenerator/node_modules/
+/src/ChartGenerator/output/
